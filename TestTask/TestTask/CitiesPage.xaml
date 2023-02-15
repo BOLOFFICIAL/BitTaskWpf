@@ -1,0 +1,22 @@
+﻿<Page x:Class="TestTask.CitiesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestTask"
+      mc:Ignorable="d"
+      Title="CitiesPage" Width="790" Height="394.04">
+    <DataGrid Name="CitiesDataGrid" 
+              IsReadOnly="True"
+              MouseDoubleClick="CitiesDataGrid_MouseDoubleClick">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="ID города" 
+                                Binding="{Binding id}"/>
+            <DataGridTextColumn Header="Название города"  
+                                Binding="{Binding name}"/>
+            <DataGridTextColumn Header="Количество улиц"  
+                                Binding="{Binding count}"
+                                Width="*"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</Page>
